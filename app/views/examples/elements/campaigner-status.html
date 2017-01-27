@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  Referendum Outcome
+  Campaigner Status
 {% endblock %}
 
 {% block content %}
@@ -12,16 +12,17 @@
 
   <!-- Back link instead of breadcrumb bar -->
   <div id="back">
-    <a href="/examples/register-campaigner-start-page" class="back-link">Back</a>
+    <a href="/examples/elements/referendum-outcome" class="back-link">Back</a>
   </div>
+
 
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <form action="/examples/elements/referendum-outcome" method="post" class="form">
+      <form action="/examples/elements/campaigner-status" method="post" class="form">
 
         <h2 class="heading-large">
-          Which referendum outcome will you be campaigning for?
+          Are you registering as an individual or organisation?
         </h2>
 
         <p>
@@ -32,17 +33,17 @@
           <fieldset>
 
             <legend class="visuallyhidden">
-              Which referendum outcome will you be campaigning for?
+              Are you registering as an individual or organisation?
             </legend>
 
-            <label for="outcome-a" class="block-label">
-              <input id="outcome-a" type="radio" name="referendum" value="Outcome A">
-              <span class="heading-small">Outcome A</span><br>
+            <label for="radio-part-2" class="block-label">
+              <input id="radio-part-2" type="radio" name="housing-act" value="Part 2">
+              <span class="heading-small">An individual registered on a UK electoral register</span><br>
             </label>
 
-            <label for="outcome-b" class="block-label">
-              <input id="outcome-b" type="radio" name="referendum" value="Outcome B">
-              <span class="heading-small">Outcome B</span><br>
+            <label for="radio-part-3" class="block-label">
+              <input id="radio-part-3" type="radio" name="housing-act" value="Part 3">
+              <span class="heading-small">an organisation</span><br>
             </label>
 
           </fieldset>

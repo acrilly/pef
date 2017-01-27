@@ -1,18 +1,25 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  Example - Radio buttons and checkboxes
+  Third Party Status
 {% endblock %}
 
 {% block content %}
 <main id="content" role="main">
 
-  {% include "includes/breadcrumb_examples.html" %}
+  <!-- Alpha Banner -->
+  {% include "includes/phase_banner_alpha.html" %}
+
+  <!-- Back link instead of breadcrumb bar -->
+  <div id="back">
+    <a href="/examples/register-third-party-start-page" class="back-link">Back</a>
+  </div>
+
 
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <form action="/examples/elements/regulated-entity-status" method="post" class="form">
+      <form action="/examples/elements/third-party-status" method="post" class="form">
 
         <h2 class="heading-large">
           Are you registering as an individual or organisation?

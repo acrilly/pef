@@ -40,6 +40,7 @@ router.get('/examples/over-18', function (req, res) {
 });
 
 // add your routes here
+// Political Party
 
 router.post('/examples/elements/party-name', function (req, res) {
   // Party name form submitted
@@ -101,14 +102,15 @@ router.post('/examples/elements/party-emblems', function (req, res) {
 // Referendum Campaigner
 
 router.post('/examples/elements/referendum-outcome', function (req, res) {
-  res.render('examples/elements/regulated-entity-status');
+  res.render('examples/elements/campaigner-status');
 
 });
 
-router.post('/examples/elements/regulated-entity-status', function (req, res) {
+router.post('/examples/elements/campaigner-status', function (req, res) {
   res.render('examples/elements/register-organisation');
 
 });
+
 
 router.post('/examples/elements/register-organisation', function (req, res) {
   res.render('examples/elements/organisation-type');
@@ -125,5 +127,15 @@ router.post('/examples/elements/responsible-person', function (req, res) {
 
 });
 
+// Referendum Non-party Campaigner (Third Party)
 
+router.post('/examples/elements/third-party-status', function (req, res) {
+  res.render('examples/elements/register-individual');
+
+});
+
+router.post('/examples/elements/register-individual', function (req, res) {
+  res.render('examples/check-your-answers-third-party');
+
+});
 module.exports = router;
