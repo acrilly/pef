@@ -1,0 +1,134 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Check your answers
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  
+  <!-- Alpha Banner -->
+  {% include "includes/phase_banner_alpha.html" %}
+
+  <!-- Back link instead of breadcrumb bar -->
+  <div id="back">
+    <a href="/examples/elements/party-emblems" class="back-link">Back</a>
+  </div>
+
+
+  <h1 class="heading-large">
+    Check your answers before sending your application
+  </h1>
+
+  <table class="check-your-answers">
+
+    <thead>
+      <tr>
+        <th colspan="2">
+          <h2 class="heading-medium">
+            Referendum Campaigner Registration
+          </h2>
+        </th>
+        <th>
+        </th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>
+          Referendum Outcome
+        </td>
+        <td>
+          Outcome B<br>
+        </td>
+        <td class="change-answer">
+          <a href="/examples/elements/referendum-outcome">
+            Change <span class="visuallyhidden">Exporter name</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Individual or Organisation
+        </td>
+        <td>
+          Organisation<br>
+        </td>
+        <td class="change-answer">
+          <a href="/examples/elements/regulated-entity-status">
+            Change <span class="visuallyhidden">Producer name</span>
+          </a>
+        </td>
+      </tr>
+            <tr>
+        <td>
+          Organisation Details
+        </td>
+        <td>
+          Organisation name<br>
+          First line of address<br>
+          Second line of address<br>
+          Town or City<br>
+          County<br>
+          Postcode<br>
+          Tel: 01234 567 890<br>
+          Email: email@email.com<br>
+          Company Registration Number: 12345678
+        </td>
+        <td class="change-answer">
+          <a href="/examples/elements/regiister-organisation">
+            Change <span class="visuallyhidden">Producer name</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Organisation Type
+        </td>
+        <td>
+          Company<br>
+        </td>
+        <td class="change-answer">
+          <a href="/examples/elements/organisation-type">
+            Change <span class="visuallyhidden">Site of export name</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Responsible Person
+        </td>
+        <td>
+          Responsible person name<br>
+          First line of address<br>
+          Second line of address<br>
+          Town or City<br>
+          County<br>
+          Postcode<br>
+          Tel: 01234 567 890<br>
+          Email: email@email.com<br>
+        </td>
+        <td class="change-answer">
+          <a href="/examples/elements/responsible-person">
+            Change <span class="visuallyhidden">Producer name</span>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 class="heading-medium">Now send your application</h2>
+
+  <p class="text">
+    By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.
+  </p>
+
+  <div class="form-group">
+    <a href="/examples/confirmation-page" class="button">Print and sign delcaration</a>
+  </div>
+
+</main>
+
+{% endblock %}

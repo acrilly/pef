@@ -121,7 +121,7 @@ router.post('/examples/elements/organisation-type', function (req, res) {
 });
 
 router.post('/examples/elements/responsible-person', function (req, res) {
-  res.render('examples/check-your-answers-page');
+  res.render('examples/check-your-answers-campaigner');
 
 });
 
