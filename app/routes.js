@@ -41,4 +41,89 @@ router.get('/examples/over-18', function (req, res) {
 
 // add your routes here
 
+router.post('/examples/elements/party-name', function (req, res) {
+  // Party name form submitted
+  // Do something with the data to build up the application
+  // Render the next part of the application process i.e. the party correspondence page
+  res.render('examples/elements/party-correspondence');
+});
+
+router.post('/examples/elements/party-correspondence', function (req, res) {
+  // Party correspondence form submitted
+  // Do something with the data to build up the application
+  // Render the next part of the application process i.e. the party leader page
+  res.render('examples/elements/party-leader');
+});
+
+router.post('/examples/elements/party-leader', function (req, res) {
+  // Party leader form submitted
+  // Do something with the data to build up the application
+  // Render the next part of the application process i.e. the party nominating officer page
+  res.render('examples/elements/party-nominating-officer');
+});
+
+router.post('/examples/elements/party-nominating-officer', function (req, res) {
+  // Party nominating officer form submitted
+  // Do something with the data to build up the application
+  // Render the next part of the application process i.e. the party treasurer page
+  res.render('examples/elements/party-treasurer');
+});
+
+router.post('/examples/elements/party-treasurer', function (req, res) {
+  // Party treasurer form submitted
+  // Do something with the data to build up the application
+  // Render the next part of the application process i.e. the party campaigns officer page
+  res.render('examples/elements/party-campaigns-officer');
+});
+
+router.post('/examples/elements/party-campaigns-officer', function (req, res) {
+  // Party campaigns officer form submitted
+  // Do something with the data to build up the application
+  // Render the next part of the application process i.e. the party descriptions page
+  res.render('examples/elements/party-descriptions');
+});
+
+router.post('/examples/elements/party-descriptions', function (req, res) {
+  // Party descriptions form submitted
+  // Do something with the data to build up the application
+  // Render the next part of the application process i.e. the party emblems page
+  res.render('examples/elements/party-emblems');
+});
+
+router.post('/examples/elements/party-emblems', function (req, res) {
+  // Party emblems form submitted
+  // Do something with the data to build up the application
+  // Render the next part of the application process i.e. the chaeck your answers page
+  res.render('examples/check-your-answers-page');
+
+});
+
+// Referendum Campaigner
+
+router.post('/examples/elements/referendum-outcome', function (req, res) {
+  res.render('examples/elements/regulated-entity-status');
+
+});
+
+router.post('/examples/elements/regulated-entity-status', function (req, res) {
+  res.render('examples/elements/register-organisation');
+
+});
+
+router.post('/examples/elements/register-organisation', function (req, res) {
+  res.render('examples/elements/organisation-type');
+
+});
+
+router.post('/examples/elements/organisation-type', function (req, res) {
+  res.render('examples/elements/responsible-person');
+
+});
+
+router.post('/examples/elements/responsible-person', function (req, res) {
+  res.render('examples/check-your-answers-page');
+
+});
+
+
 module.exports = router;

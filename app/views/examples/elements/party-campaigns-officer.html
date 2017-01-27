@@ -1,0 +1,106 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Example - Forms
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- Alpha Banner -->
+  {% include "includes/phase_banner_alpha.html" %}
+
+  <!-- Back link instead of breadcrumb bar -->
+  <div id="back">
+    <a href="/examples/elements/party-treasurer" class="back-link">Back</a>
+  </div>
+
+
+  <form action="/examples/elements/party-campaigns-officer" method="post" class="form">
+
+    <h1 class="form-title heading-large">
+      Party Campaigns Officer
+    </h1>
+
+
+       <!-- Telephone number -->
+    <div class="form-group">
+        <fieldset>
+                <div class="form-group form-group-compound">
+                  <label class="form-label" for="title">Title</label>
+                  <input class="form-control form-control-1-4" type="text" id="Title">
+                </div>
+
+                <div class="form-group form-group-compound">
+                  <label class="form-label" for="Forenames">Forenames</label>
+                  <input class="form-control" type="text" id="Forenames">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="Surname">Surname</label>
+                  <input class="form-control" type="text" id="Surname">
+                </div>
+        </fieldset>
+    </div>
+     <!-- Correspondence Address -->
+
+        <div class="form-group">
+                        <fieldset>
+
+                <legend class="form-label-bold">
+                  Correspondence address
+                </legend>
+
+                <div class="form-group form-group-compound">
+                  <label class="form-label" for="address-line-1">Street</label>
+                  <input class="form-control" type="text" id="address-line-1">
+                </div>
+
+                <div class="form-group form-group-compound">
+                  <label class="form-label visuallyhidden" for="address-line-2">Street</label>
+                  <input class="form-control" type="text" id="address-line-2">
+                </div>
+
+                <div class="form-group form-group-compound">
+                  <label class="form-label" for="address-town">Town or City</label>
+                  <input class="form-control form-control-1-4" type="text" id="address-town">
+                </div>
+
+                <div class="form-group form-group-compound">
+                  <label class="form-label" for="address-county">County</label>
+                  <input class="form-control form-control-1-4" type="text" id="address-county">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="address-postcode">Postcode</label>
+                  <input class="form-control form-control-1-8" type="text" id="address-postcode">
+                </div>
+
+              </fieldset>
+</div>
+    <!-- Telephone number -->
+    <div class="form-group">
+      <label class="form-label-bold" for="ni-number">
+        Telephone number
+      </label>
+      <input type="text" class="form-control" id="telephone-number">
+    </div>
+
+    <!-- Email Address --> 
+    <div class="form-group">
+      <fieldset>
+        <legend class="form-label-bold">Email address</legend>
+
+        <div class="form-email">
+      <input type="text" class="form-control" id="email">
+            </fieldset>
+    </div>
+
+    <div class="form-group">
+      <input type="submit" class="button" value="Continue">
+    </div>
+
+  </form>
+
+</main>
+{% endblock %}
