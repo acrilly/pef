@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Referendum Outcome
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- Alpha Banner -->
+  {% include "includes/phase_banner_alpha.html" %}
+
+  <!-- Back link instead of breadcrumb bar -->
+  <div id="back">
+    <a href="/examples/elements/party-treasurer" class="back-link">Back</a>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form action="/examples/elements/additional-officer" method="post" class="form">
+
+        <h2 class="heading-large">
+          Do you wish to register a campaigns officer or additional officer?
+        </h2>
+
+        <p>
+          Select one of the options below.
+        </p>
+
+        <div class="form-group">
+          <fieldset>
+
+            <legend class="visuallyhidden">
+              Do you wish to register a campaigns officer or additional officer?
+            </legend>
+
+            <label for="no" class="block-label">
+              <input id="no" type="radio" name="officer" value="None">
+              <span class="heading-small">No: all party officers are registered</span><br>
+            </label>
+
+            <label for="campaigns-officer" class="block-label">
+              <input id="campaigns-officer" type="radio" name="officer" value="Campaigns Officer">
+              <span class="heading-small">Yes: a Campaigns Officer</span><br>
+            </label>
+
+            <label for="additional-officer" class="block-label">
+              <input id="additional-officer" type="radio" name="officer" value="Additional Officer">
+              <span class="heading-small">Yes: an Additional Officer</span><br>
+            </label>
+
+          </fieldset>
+        </div>
+
+
+    <div class="form-group">
+      <input type="submit" class="button" value="Continue">
+    </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+{% endblock %}

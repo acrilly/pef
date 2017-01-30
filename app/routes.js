@@ -74,6 +74,13 @@ router.post('/examples/elements/party-treasurer', function (req, res) {
   // Party treasurer form submitted
   // Do something with the data to build up the application
   // Render the next part of the application process i.e. the party campaigns officer page
+  res.render('examples/elements/additional-officer');
+});
+
+router.post('/examples/elements/additional-officer', function (req, res) {
+  // Party treasurer form submitted
+  // Do something with the data to build up the application
+  // Render the next part of the application process i.e. the party campaigns officer page
   res.render('examples/elements/party-campaigns-officer');
 });
 
