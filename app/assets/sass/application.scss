@@ -39,3 +39,27 @@
 }
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+// Override #global-header #logo to use Electoral Commission logo
+// Add padding left to display the whole logo
+
+#global-header #logo {
+    float: left;
+    position: relative;
+    top: -1px;
+    height: 74px;
+    overflow: visible;
+    vertical-align: baseline;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 1em;
+    text-decoration: none;
+    text-rendering: optimizeLegibility;
+    margin-bottom: -3px;
+    padding-top: 2px;
+    border-bottom: 1px solid transparent;
+    background: url(http://www.electoralcommission.org.uk/__data/assets/image/0004/155857/logo.png) no-repeat;
+    background-size: 148px 74px;
+    background-position: 0 0;
+    padding-left: 107px;
+}
