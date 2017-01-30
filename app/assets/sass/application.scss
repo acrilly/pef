@@ -73,6 +73,11 @@
     padding-bottom: 8px;
 }
 
+#global-header {
+    background-color: white;
+    width: 100%;
+}
+
 // Change header text from white to black
 #global-header .header-proposition #proposition-name {
     font-family: "nta", Arial, sans-serif;
@@ -81,6 +86,6 @@
     font-weight: 400;
     text-transform: none;
     font-weight: bold;
-    color: black;
+    color: #0b0c0c;
     text-decoration: none;
 }
