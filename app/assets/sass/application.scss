@@ -63,3 +63,24 @@
     background-position: 0 0;
     padding-left: 107px;
 }
+
+// Override the header background colour
+#global-header .header-wrapper {
+    background-color: white;
+    max-width: 990px;
+    margin: 0 auto;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+// Change header text from white to black
+#global-header .header-proposition #proposition-name {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 24px;
+    line-height: 1.25;
+    font-weight: 400;
+    text-transform: none;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
