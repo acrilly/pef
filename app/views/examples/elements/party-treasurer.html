@@ -19,13 +19,36 @@
   <form action="/examples/elements/party-treasurer" method="post" class="form">
 
     <h1 class="form-title heading-large">
-      Party Treasurer
+      Party Officers: Treasurer
     </h1>
 
+    <!-- Party Officer Help -->
+    <div class="form-group">
+      <details>
+        <summary><span class="summary">Help with party officers</span></summary>
+        <div class="panel panel-border-narrow">
+          <p>Please give the full names and home addresses of the people to be registered as leader, nominating officer and treasurer of the party. Parties may also choose to register a campaigns officer (this post cannot be filled by the person to be registered as party treasurer).</p>
+          <p>You must have at least two individuals as the party's officers. If the leader, nominating officer and treasurer are the same person, a campaigns officer or additional officer must be registered.</p>
+          <p>Please note that home addresses will not be part of the published register of parties and therefore will not be available to people viewing the register (unless the address is published as the headquarters address).<p>
+        </div>
+        <div class="notice">
+          <i class="icon icon-important">
+            <span class="visually-hidden">Warning</span>
+          </i>
+          <strong class="bold-small">
+            The registered officers of parties are subject to legal requirements under the Political Parties, Elections and Referendums Act 2000.<br>
+          </strong>
+        </div>
+      </details>
+    </div>
 
-       <!-- Telephone number -->
+    <!-- Full name -->
     <div class="form-group">
         <fieldset>
+                <legend class="form-label-bold">
+                  Treasurer Full Name
+                </legend>
+
                 <div class="form-group form-group-compound">
                   <label class="form-label" for="title">Title</label>
                   <input class="form-control form-control-1-4" type="text" id="Title">
@@ -48,7 +71,7 @@
                         <fieldset>
 
                 <legend class="form-label-bold">
-                  Correspondence address
+                  Home address
                 </legend>
 
                 <div class="form-group form-group-compound">
