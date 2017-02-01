@@ -42,12 +42,7 @@
       </details>
     </div>
 
-
-
-
-
-
-       <!-- Telephone number -->
+    <!-- Party Leader Name -->
     <div class="form-group">
         <fieldset>
                 <legend class="form-label-bold">
@@ -55,73 +50,69 @@
                 </legend>
                 <div class="form-group form-group-compound">
                   <label class="form-label" for="title">Title</label>
-                  <input class="form-control form-control-1-4" type="text" id="Title">
+                  <input name="leaderTitle" class="form-control form-control-1-4" type="text" id="Title">
                 </div>
 
                 <div class="form-group form-group-compound">
                   <label class="form-label" for="Forenames">Forenames</label>
-                  <input class="form-control" type="text" id="Forenames">
+                  <input name="leaderForename" lass="form-control" type="text" id="Forenames">
                 </div>
 
                 <div class="form-group">
                   <label class="form-label" for="Surname">Surname</label>
-                  <input class="form-control" type="text" id="Surname">
+                  <input name="leaderSurname" class="form-control" type="text" id="Surname">
                 </div>
         </fieldset>
     </div>
+
      <!-- Correspondence Address -->
+     <div class="form-group" id="address">
+       <fieldset>
+         <legend class="form-label-bold">Correspondence address</legend>
+         <div class="form-group form-group-compound">
+           <label class="form-label" for="address-line-1">Street</label>
+           <input name="leaderAddressLine1" class="form-control" type="text" id="addressLine1">
+         </div>
 
-        <div class="form-group">
-                        <fieldset>
+         <div class="form-group form-group-compound">
+           <label class="form-label visuallyhidden" for="address-line-2">Street</label>
+           <input name="leaderAddressLine2" class="form-control" type="text" id="addressLine2">
+         </div>
 
-                <legend class="form-label-bold">
-                  Home address
-                </legend>
+         <div class="form-group form-group-compound">
+           <label class="form-label" for="address-town">Town or City</label>
+           <input name="leaderTown" class="form-control form-control-1-4" type="text" id="addressTown">
+         </div>
 
-                <div class="form-group form-group-compound">
-                  <label class="form-label" for="address-line-1">Street</label>
-                  <input class="form-control" type="text" id="address-line-1">
-                </div>
+         <div class="form-group form-group-compound">
+           <label class="form-label" for="address-county">County</label>
+           <input name="leaderCounty" class="form-control form-control-1-4" type="text" id="addressCounty">
+         </div>
 
-                <div class="form-group form-group-compound">
-                  <label class="form-label visuallyhidden" for="address-line-2">Street</label>
-                  <input class="form-control" type="text" id="address-line-2">
-                </div>
+         <div class="form-group">
+           <label class="form-label" for="address-postcode">Postcode</label>
+           <input name="leaderPostcode" class="form-control form-control-1-8" type="text" id="addressPostcode">
+         </div>
+       </fieldset>
+      </div>
 
-                <div class="form-group form-group-compound">
-                  <label class="form-label" for="address-town">Town or City</label>
-                  <input class="form-control form-control-1-4" type="text" id="address-town">
-                </div>
+      <!-- Telephone number -->
+      <div class="form-group">
+        <label class="form-label-bold" for="telephone-number">
+          Telephone number
+        </label>
+        <input name="leaderPhone" type="text" class="form-control" id="telephone-number">
+      </div>
 
-                <div class="form-group form-group-compound">
-                  <label class="form-label" for="address-county">County</label>
-                  <input class="form-control form-control-1-4" type="text" id="address-county">
-                </div>
-
-                <div class="form-group">
-                  <label class="form-label" for="address-postcode">Postcode</label>
-                  <input class="form-control form-control-1-8" type="text" id="address-postcode">
-                </div>
-
-              </fieldset>
-</div>
-    <!-- Telephone number -->
-    <div class="form-group">
-      <label class="form-label-bold" for="ni-number">
-        Telephone number
-      </label>
-      <input type="text" class="form-control" id="telephone-number">
-    </div>
-
-    <!-- Email Address --> 
-    <div class="form-group">
-      <fieldset>
-        <legend class="form-label-bold">Email address</legend>
-
-        <div class="form-email">
-      <input type="text" class="form-control" id="email">
-            </fieldset>
-    </div>
+      <!-- Email Address --> 
+      <div class="form-group">
+        <fieldset>
+          <legend class="form-label-bold">Email address</legend>
+          <div class="form-email">
+            <input name="leaderEmail" type="text" class="form-control" id="email">
+          </div>
+        </fieldset>
+      </div>
 
     <div class="form-group">
       <input type="submit" class="button" value="Continue">

@@ -20,78 +20,61 @@
       <details>
         <summary><span class="summary">Help with party name</span></summary>
         <div class="panel panel-border-narrow">
-          <p>
-Please enter the name you wish to register for your party. 
-          </p>
-          <p>
-            If the party name is in a language other than English or Welsh, an accurate English translation must also be provided. 
-          </p>
-          <p>
-            If the party name is in Welsh, there is no need to provide an English translation, but if a translation is provided, both the Welsh name and the English translation will be jointly registered to the party.
-            </p>
-            <p>
-              There are controls governing what party names can be registered, which can be found in our Guidance on registering as a political party,and on the current registers of political parties on our website.
-              </p> 
+          <p>Please enter the name you wish to register for your party.</p>
+          <p>If the party name is in a language other than English or Welsh, an accurate English translation must also be provided.</p>
+          <p>If the party name is in Welsh, there is no need to provide an English translation, but if a translation is provided, both the Welsh name and the English translation will be jointly registered to the party.</p>
+          <p>There are controls governing what party names can be registered, which can be found in our Guidance on registering as a political party,and on the current registers of political parties on our website.</p> 
         </div>
       </details>
     </div>
 
 
     <!-- Name of party -->
-        <div class="form-group">
-          <fieldset>
+    <div class="form-group">
+      <fieldset>
+        <legend class="form-label-bold">What language do you want to register your party name in?</legend>
+        <p class="form-hint">You can apply to register a party name in both English and Welsh. If your party name is not in English or Welsh then please select ‘Other’ as the preferred language. You will need to provide an accurate English translation.</p>
 
-            <legend class="form-label-bold">What language do you want to register your party name in?</legend>
-      <p class="form-hint">You can apply to register a party name in both English and Welsh. If your party name is not in English or Welsh then please select ‘Other’ as the preferred language. You will need to provide an accurate English translation.</p>
-            <label for="lang_english" class="block-label" data-target="english_lang">
-              <input type="checkbox" name="lang_english" value="English" id="lang_english">
-              English
-            </label>
+        <!-- Englsh checkbox -->
+        <label for="lang_english" class="block-label" data-target="english_lang">
+          <input type="checkbox" name="lang_english" value="English" id="lang_english">English
+        </label>
 
-            <div class="panel panel-border-narrow js-hidden" id="english_lang">
-              <label for="english" class="form-label">
-                English Party Name
-              </label>
-              <input class="form-control" type="text" id="english">
-            </div>            
-
-            <label for="lang_welsh" class="block-label" data-target="welsh_lang">
-              <input type="checkbox" name="lang_welsh" value="Welsh" id="lang_welsh">
-              Welsh
-            </label>
-
-            <div class="panel panel-border-narrow js-hidden" id="welsh_lang">
-              <label for="welsh" class="form-label">
-                Welsh Party Name
-              </label>
-              <input class="form-control" type="text" id="welsh">
-            </div>
-
-            <label for="lang_other" class="block-label" data-target="example_lang_other">
-              <input type="checkbox" name="lang_other" value="other" id="lang_other">
-              Other
-            </label>
-
-            <div class="panel panel-border-narrow js-hidden" id="example_lang_other">
-              <label for="lang_other_languages" class="form-label">
-                Other Language Party Name
-              </label>
-              <input class="form-control" type="text" id="lang_other_languages">
-              <p class="form-hint">English translation</p>
-              <input type="text" class="form-control" id="other-party-name">
-            </div>
-
-          </fieldset>
+        <div class="panel panel-border-narrow js-hidden" id="english_lang">
+          <label for="english" class="form-label">English Party Name</label>
+          <input name="englishPartyName" class="form-control" type="text" id="english">
         </div>
 
+        <!-- Welsh checkbox -->
+        <label for="lang_welsh" class="block-label" data-target="welsh_lang">
+          <input type="checkbox" name="lang_welsh" value="Welsh" id="lang_welsh">Welsh
+        </label>
 
+        <div class="panel panel-border-narrow js-hidden" id="welsh_lang">
+          <label for="welsh" class="form-label">Welsh Party Name</label>
+          <input name="welshPartyName" class="form-control" type="text" id="welsh">
+        </div>
 
+        <!-- Other checkbox -->
+        <label for="lang_other" class="block-label" data-target="example_lang_other">
+          <input type="checkbox" name="lang_other" value="Other" id="lang_other">Other
+        </label>
+
+        <div class="panel panel-border-narrow js-hidden" id="example_lang_other">
+          <label for="lang_other_languages" class="form-label">Other Language Party Name</label>
+          <input name="otherPartyName" class="form-control" type="text" id="other-party-name">
+          <label for="lang_other_languages" class="form-label">English translation</label>
+          <input name="partyNameTranslation" class="form-control" type="text" id="other-translation">
+        </div>
+
+      </fieldset>
+    </div>
 
     <div class="form-group">
       <input type="submit" class="button" value="Continue">
     </div>
 
   </form>
-
 </main>
+
 {% endblock %}

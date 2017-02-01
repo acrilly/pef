@@ -27,8 +27,8 @@
       <details>
         <summary><span class="summary">Help with party officers</span></summary>
         <div class="panel panel-border-narrow">
-          <p>Please give the full names and home addresses of the people to be registered as leader, nominating officer and treasurer of the party. Parties may also choose to register a campaigns officer (this post cannot be filled by the person to be registered as party treasurer).</p>
-          <p>You must have at least two individuals as the party's officers. If the leader, nominating officer and treasurer are the same person, a campaigns officer or additional officer must be registered.</p>
+          <p>Please give the full names and home addresses of the people to be registered as treasurer, nominating officer and treasurer of the party. Parties may also choose to register a campaigns officer (this post cannot be filled by the person to be registered as party treasurer).</p>
+          <p>You must have at least two individuals as the party's officers. If the treasurer, nominating officer and treasurer are the same person, a campaigns officer or additional officer must be registered.</p>
           <p>Please note that home addresses will not be part of the published register of parties and therefore will not be available to people viewing the register (unless the address is published as the headquarters address).<p>
         </div>
         <div class="notice">
@@ -51,79 +51,75 @@
 
                 <div class="form-group form-group-compound">
                   <label class="form-label" for="title">Title</label>
-                  <input class="form-control form-control-1-4" type="text" id="Title">
+                  <input name="treasurerTitle" class="form-control form-control-1-4" type="text" id="Title">
                 </div>
 
                 <div class="form-group form-group-compound">
                   <label class="form-label" for="Forenames">Forenames</label>
-                  <input class="form-control" type="text" id="Forenames">
+                  <input name="treasurerForenames" class="form-control" type="text" id="Forenames">
                 </div>
 
                 <div class="form-group">
                   <label class="form-label" for="Surname">Surname</label>
-                  <input class="form-control" type="text" id="Surname">
+                  <input name="treasurerSurname" class="form-control" type="text" id="Surname">
                 </div>
         </fieldset>
     </div>
+
      <!-- Correspondence Address -->
+     <div class="form-group" id="address">
+       <fieldset>
+         <legend class="form-label-bold">Correspondence address</legend>
+         <div class="form-group form-group-compound">
+           <label class="form-label" for="address-line-1">Street</label>
+           <input name="treasurerAddressLine1" class="form-control" type="text" id="addressLine1">
+         </div>
 
-        <div class="form-group">
-                        <fieldset>
+         <div class="form-group form-group-compound">
+           <label class="form-label visuallyhidden" for="address-line-2">Street</label>
+           <input name="treasurerAddressLine2" class="form-control" type="text" id="addressLine2">
+         </div>
 
-                <legend class="form-label-bold">
-                  Home address
-                </legend>
+         <div class="form-group form-group-compound">
+           <label class="form-label" for="address-town">Town or City</label>
+           <input name="treasurerTown" class="form-control form-control-1-4" type="text" id="addressTown">
+         </div>
 
-                <div class="form-group form-group-compound">
-                  <label class="form-label" for="address-line-1">Street</label>
-                  <input class="form-control" type="text" id="address-line-1">
-                </div>
+         <div class="form-group form-group-compound">
+           <label class="form-label" for="address-county">County</label>
+           <input name="treasurerCounty" class="form-control form-control-1-4" type="text" id="addressCounty">
+         </div>
 
-                <div class="form-group form-group-compound">
-                  <label class="form-label visuallyhidden" for="address-line-2">Street</label>
-                  <input class="form-control" type="text" id="address-line-2">
-                </div>
+         <div class="form-group">
+           <label class="form-label" for="address-postcode">Postcode</label>
+           <input name="treasurerPostcode" class="form-control form-control-1-8" type="text" id="addressPostcode">
+         </div>
+       </fieldset>
+      </div>
 
-                <div class="form-group form-group-compound">
-                  <label class="form-label" for="address-town">Town or City</label>
-                  <input class="form-control form-control-1-4" type="text" id="address-town">
-                </div>
+      <!-- Telephone number -->
+      <div class="form-group">
+        <label class="form-label-bold" for="telephone-number">
+          Telephone number
+        </label>
+        <input name="treasurerPhone" type="text" class="form-control" id="telephone-number">
+      </div>
 
-                <div class="form-group form-group-compound">
-                  <label class="form-label" for="address-county">County</label>
-                  <input class="form-control form-control-1-4" type="text" id="address-county">
-                </div>
+      <!-- Email Address --> 
+      <div class="form-group">
+        <fieldset>
+          <legend class="form-label-bold">Email address</legend>
+          <div class="form-email">
+            <input name="treasurerEmail" type="text" class="form-control" id="email">
+          </div>
+        </fieldset>
+      </div>
 
-                <div class="form-group">
-                  <label class="form-label" for="address-postcode">Postcode</label>
-                  <input class="form-control form-control-1-8" type="text" id="address-postcode">
-                </div>
+      <div class="form-group">
+        <input type="submit" class="button" value="Continue">
+      </div>
 
-              </fieldset>
-</div>
-    <!-- Telephone number -->
-    <div class="form-group">
-      <label class="form-label-bold" for="ni-number">
-        Telephone number
-      </label>
-      <input type="text" class="form-control" id="telephone-number">
-    </div>
+    </form>
+  </main>
 
-    <!-- Email Address --> 
-    <div class="form-group">
-      <fieldset>
-        <legend class="form-label-bold">Email address</legend>
-
-        <div class="form-email">
-      <input type="text" class="form-control" id="email">
-            </fieldset>
-    </div>
-
-    <div class="form-group">
-      <input type="submit" class="button" value="Continue">
-    </div>
-
-  </form>
-
-</main>
 {% endblock %}

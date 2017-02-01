@@ -35,35 +35,30 @@
       </details>
     </div>
 
-       <!-- Description 1r -->
+    <!-- Description 1r -->
     <div class="form-group">
-        <fieldset>
-                <div class="form-group form-group-compound">
-                  <label class="form-label" for="title">Description</label>
-                  <input class="form-control" type="text" id="description-1">
-                </div>
+      <fieldset>
+        <div class="form-group form-group-compound">
+          <label class="form-label" for="title">Description</label>
+          <input name="description1" class="form-control" type="text" id="description-1">
+        </div>
 
-                <label for="joint-desc" class="block-label" data-target="joint-desc-1">
-                    <input type="checkbox" name="joint-desc" value="Joint description" id="joint-desc">Joint description
-                </label>
+        <label for="joint-desc" class="block-label" data-target="joint-desc-1">
+          <input type="checkbox" name="joint-desc" value="Joint description" id="joint-desc">Joint description
+        </label>
 
-            <label for="lang_other" class="block-label" data-target="example_lang_other">
-              <input type="checkbox" name="lang_other" value="other" id="lang_other">
-              Other language
-            </label>
+        <label for="lang_other" class="block-label" data-target="example_lang_other">
+          <input type="checkbox" name="lang_other" value="Other" id="lang_other">Other language
+        </label>
 
-            <div class="panel panel-border-narrow js-hidden" id="example_lang_other">
-              <label for="lang_other_languages" class="form-label">
-                Other Language Description
-              </label>
-              <input class="form-control" type="text" id="lang_other_languages">
-              <p class="form-hint">English translation</p>
-              <input type="text" class="form-control" id="other-party-name">
-            </div>
-        </fieldset>
+        <div class="panel panel-border-narrow js-hidden" id="example_lang_other">
+          <label for="lang_other_languages" class="form-label">Other Language Description</label>
+          <input name="description1Other" class="form-control" type="text" id="lang_other_languages">
+          <label for="lang_other_languages" class="form-label">English translation</label>
+          <input name="desription1Translation" class="form-control" type="text" id="other-party-name">
+        </div>
+      </fieldset>
     </div>
-
-
 
     <div class="form-group">
       <input type="submit" class="button" value="Continue">
