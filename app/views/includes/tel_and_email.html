@@ -1,0 +1,17 @@
+      <!-- Telephone number -->
+      <div class="form-group">
+        <label class="form-label-bold" for="telephone-number">
+          Telephone number
+        </label>
+        <input name="phone" type="tel" class="form-control" id="telephone-number"  value="{{ entity.phone if entity.phone else "" }}">
+      </div>
+
+      <!-- Email Address --> 
+      <div class="form-group">
+        <fieldset>
+          <legend class="form-label-bold">Email address</legend>
+          <div class="form-email">
+            <input name="email" type="email" class="form-control" id="email"  value="{{ entity.email if entity.email else "" }}">
+          </div>
+        </fieldset>
+      </div>

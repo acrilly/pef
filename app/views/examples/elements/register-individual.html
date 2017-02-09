@@ -22,77 +22,13 @@
       Details of the individual applying for registration
     </h1>
 
-
-       <!-- Telephone number -->
-    <div class="form-group">
-        <fieldset>
-                <div class="form-group form-group-compound">
-                  <label class="form-label" for="title">Title</label>
-                  <input name="individualTitle" class="form-control form-control-1-4" type="text" id="Title">
-                </div>
-
-                <div class="form-group form-group-compound">
-                  <label class="form-label" for="Forenames">Forenames</label>
-                  <input name="individualForenames" class="form-control" type="text" id="Forenames">
-                </div>
-
-                <div class="form-group">
-                  <label class="form-label" for="Surname">Surname</label>
-                  <input name="individualSurname" class="form-control" type="text" id="Surname">
-                </div>
-        </fieldset>
-    </div>
-
- 
-     <!-- Correspondence Address -->
-     <div class="form-group" id="address">
-       <fieldset>
-         <legend class="form-label-bold">Correspondence address</legend>
-         <div class="form-group form-group-compound">
-           <label class="form-label" for="address-line-1">Street</label>
-           <input name="individualAddressLine1" class="form-control" type="text" id="addressLine1">
-         </div>
-
-         <div class="form-group form-group-compound">
-           <label class="form-label visuallyhidden" for="address-line-2">Street</label>
-           <input name="individualAddressLine2" class="form-control" type="text" id="addressLine2">
-         </div>
-
-         <div class="form-group form-group-compound">
-           <label class="form-label" for="address-town">Town or City</label>
-           <input name="individualTown" class="form-control form-control-1-4" type="text" id="addressTown">
-         </div>
-
-         <div class="form-group form-group-compound">
-           <label class="form-label" for="address-county">County</label>
-           <input name="individualCounty" class="form-control form-control-1-4" type="text" id="addressCounty">
-         </div>
-
-         <div class="form-group">
-           <label class="form-label" for="address-postcode">Postcode</label>
-           <input name="individualPostcode" class="form-control form-control-1-8" type="text" id="addressPostcode">
-         </div>
-       </fieldset>
-      </div>
-
-      <!-- Telephone number -->
-      <div class="form-group">
-        <label class="form-label-bold" for="telephone-number">
-          Telephone number
-        </label>
-        <input name="individualPhone" type="text" class="form-control" id="telephone-number">
-      </div>
-
-      <!-- Email Address --> 
-      <div class="form-group">
-        <fieldset>
-          <legend class="form-label-bold">Email address</legend>
-          <div class="form-email">
-            <input name="individualEmail" type="text" class="form-control" id="email">
-          </div>
-        </fieldset>
-      </div>
-
+    <!-- Full name -->
+    {% include "includes/full_name.html" %}
+    <!-- Address -->
+    {% include "includes/address.html" %}
+    <!-- telephone and email -->
+    {% include "includes/tel_and_email.html" %}
+    
       <div class="form-group">
         <input type="submit" class="button" value="Continue">
       </div>

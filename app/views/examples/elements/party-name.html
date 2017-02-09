@@ -12,7 +12,7 @@
   <form action="/examples/elements/party-name" method="post" class="form">
 
     <h1 class="form-title heading-large">
-      Party Details: Name
+      Party Name
     </h1>
 
      <!-- Party Name Help -->
@@ -37,34 +37,34 @@
 
         <!-- Englsh checkbox -->
         <label for="lang_english" class="block-label" data-target="english_lang">
-          <input type="checkbox" name="lang_english" value="English" id="lang_english">English
+          <input type="checkbox" name="lang_english" value="English" id="lang_english" {% if party_name.englishPartyName %} checked="checked" {% endif %}>English
         </label>
 
-        <div class="panel panel-border-narrow js-hidden" id="english_lang">
+        <div class="panel panel-border-narrow {% if party_name.englishPartyName %} js-visible {% else %} js-hidden {% endif %}" id="english_lang">
           <label for="english" class="form-label">English Party Name</label>
-          <input name="englishPartyName" class="form-control" type="text" id="english">
+          <input name="englishPartyName" class="form-control" type="text" id="english" value="{{ party_name.englishPartyName if party_name.englishPartyName }}">
         </div>
 
         <!-- Welsh checkbox -->
         <label for="lang_welsh" class="block-label" data-target="welsh_lang">
-          <input type="checkbox" name="lang_welsh" value="Welsh" id="lang_welsh">Welsh
+          <input type="checkbox" name="lang_welsh" value="Welsh" id="lang_welsh"{% if party_name.welshPartyName %} checked="checked" {% endif %}>Welsh
         </label>
 
-        <div class="panel panel-border-narrow js-hidden" id="welsh_lang">
+        <div class="panel panel-border-narrow {% if party_name.welshPartyName %} js-visible {% else %} js-hidden {% endif %}" id="welsh_lang">
           <label for="welsh" class="form-label">Welsh Party Name</label>
-          <input name="welshPartyName" class="form-control" type="text" id="welsh">
+          <input name="welshPartyName" class="form-control" type="text" id="welsh"  value="{{ party_name.welshPartyName if party_name.welshPartyName }}">
         </div>
 
         <!-- Other checkbox -->
         <label for="lang_other" class="block-label" data-target="example_lang_other">
-          <input type="checkbox" name="lang_other" value="Other" id="lang_other">Other
+          <input type="checkbox" name="lang_other" value="Other" id="lang_other"{% if party_name.otherPartyName %} checked="checked" {% endif %}>Other
         </label>
 
-        <div class="panel panel-border-narrow js-hidden" id="example_lang_other">
+        <div class="panel panel-border-narrow {% if party_name.otherPartyName %} js-visible {% else %} js-hidden {% endif %}" id="example_lang_other">
           <label for="lang_other_languages" class="form-label">Other Language Party Name</label>
-          <input name="otherPartyName" class="form-control" type="text" id="other-party-name">
+          <input name="otherPartyName" class="form-control" type="text" id="other-party-name" value="{{ party_name.otherPartyName if party_name.otherPartyName }}">
           <label for="lang_other_languages" class="form-label">English translation</label>
-          <input name="partyNameTranslation" class="form-control" type="text" id="other-translation">
+          <input name="partyNameTranslation" class="form-control" type="text" id="other-translation" value="{{ party_name.partyNameTranslation if party_name.partyNameTranslation }}">
         </div>
 
       </fieldset>

@@ -17,9 +17,11 @@
   </div>
 
 
-  <h1 class="heading-large">
-    Check your answers before sending your application
-  </h1>
+  <header>
+    <h1 class="heading-large">
+      Check your answers before sending your application
+    </h1>
+  </header>
 
   <table class="check-your-answers">
 
@@ -38,18 +40,33 @@
     <tbody>
       <tr>
         <td>
-          Party Details
+          Party Name
         </td>
         <td>
-          Party name<br>
-          First line of address<br>
-          Second line of address<br>
-          Town or City<br>
-          County<br>
-          Postcode<br>
-          Tel: 01234 567 890<br>
-          Email: email@email.com<br>
-          Website: www.party.org.uk<br>
+          {% if application.party_name.englishPartyName %} English: {{ application.party_name.englishPartyName }} <br> {% endif %}
+          {% if application.party_name.welshPartyName %} Welsh: {{ application.party_name.welshPartyName }} <br> {% endif %}
+          {% if application.party_name.otherPartyName %} Other: {{ application.party_name.otherPartyName }} <br>Translation: {{ application.party_name.partyNameTranslation }}<br> {% endif %}
+          
+        </td>
+        <td class="change-answer">
+          <a href="/examples/elements/party-name">
+            Change <span class="visuallyhidden">Exporter name</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Party Headquarters
+        </td>
+        <td>
+          {% if application.party_address.addressLine1 %} {{ application.party_address.addressLine1 }}<br> {% endif %}
+          {% if application.party_address.addressLine2 %} {{ application.party_address.addressLine2 }}<br> {% endif %}
+          {% if application.party_address.town %} {{ application.party_address.town }}<br> {% endif %}
+          {% if application.party_address.county %} {{ application.party_address.county }}<br> {% endif %}
+          {% if application.party_address.postcode %} {{ application.party_address.postcode }}<br> {% endif %}
+          {% if application.party_address.phone %} Tel: {{ application.party_address.phone }}<br> {% endif %}
+          {% if application.party_address.email %} Email: {{ application.party_address.email }}<br> {% endif %}
+          {% if application.party_address.website %} Website: {{ application.party_address.website }}<br> {% endif %}
         </td>
         <td class="change-answer">
           <a href="/examples/elements/party-name">
@@ -62,15 +79,15 @@
           Party Leader
         </td>
         <td>
-          Leader name<br>
-          First line of address<br>
-          Second line of address<br>
-          Town or City<br>
-          County<br>
-          Postcode<br>
-          Tel: 01234 567 890<br>
-          Email: email@email.com<br>
-        </td>
+          {{ application.party_leader.title }} {{ application.party_leader.forenames }} {{ application.party_leader.surname }}<br>
+          {% if application.party_leader.addressLine1 %} {{ application.party_leader.addressLine1 }}<br> {% endif %}
+          {% if application.party_leader.addressLine2 %} {{ application.party_leader.addressLine2 }}<br> {% endif %}
+          {% if application.party_leader.town %}  {{ application.party_leader.town }}<br> {% endif %}
+          {% if application.party_leader.county %} {{ application.party_leader.county }}<br> {% endif %}
+          {% if application.party_leader.postcode %} {{ application.party_leader.postcode }}<br> {% endif %}
+          {% if application.party_leader.phone %} Tel: {{ application.party_leader.phone }}<br> {% endif %}
+          {% if application.party_leader.email %} Email: {{ application.party_leader.email }}<br> {% endif %}
+        </td> 
         <td class="change-answer">
           <a href="/examples/elements/party-leader">
             Change <span class="visuallyhidden">Producer name</span>
@@ -82,14 +99,14 @@
           Nominating Officer
         </td>
         <td>
-          Officer name<br>
-          First line of address<br>
-          Second line of address<br>
-          Town or City<br>
-          County<br>
-          Postcode<br>
-          Tel: 01234 567 890<br>
-          Email: email@email.com<br>
+          {{ application.party_nominating_officer.title }} {{ application.party_nominating_officer.forenames }} {{ application.party_nominating_officer.surname }}<br>
+          {% if application.party_nominating_officer.addressLine1 %} {{ application.party_nominating_officer.addressLine1 }}<br> {% endif %}
+          {% if application.party_nominating_officer.addressLine2 %} {{ application.party_nominating_officer.addressLine2 }}<br> {% endif %}
+          {% if application.party_nominating_officer.town %} {{ application.party_nominating_officer.town }}<br> {% endif %}
+          {% if application.party_nominating_officer.county %} {{ application.party_nominating_officer.county }}<br> {% endif %}
+          {% if application.party_nominating_officer.postcode %} {{ application.party_nominating_officer.postcode }}<br> {% endif %}
+          {% if application.party_nominating_officer.phone %} Tel: {{ application.party_nominating_officer.phone }}<br> {% endif %}
+          {% if application.party_nominating_officer.email %} Email: {{ application.party_nominating_officer.email }}<br> {% endif %}
         </td>
         <td class="change-answer">
           <a href="/examples/elements/party-nominating-officer">
@@ -102,14 +119,14 @@
           Treasurer
         </td>
         <td>
-          Treasurer name<br>
-          First line of address<br>
-          Second line of address<br>
-          Town or City<br>
-          County<br>
-          Postcode<br>
-          Tel: 01234 567 890<br>
-          Email: email@email.com<br>
+          {{ application.party_treasurer.title }} {{ application.party_treasurer.forenames }} {{ application.party_treasurer.surname }}<br>
+          {% if application.party_treasurer.addressLine1 %} {{ application.party_treasurer.addressLine1 }}<br> {% endif %}
+          {% if application.party_treasurer.addressLine2 %} {{ application.party_treasurer.addressLine2 }}<br> {% endif %}
+          {% if application.party_treasurer.town %} {{ application.party_treasurer.town }}<br> {% endif %}
+          {% if application.party_treasurer.county %} {{ application.party_treasurer.county }}<br> {% endif %}
+          {% if application.party_treasurer.postcode %} {{ application.party_treasurer.postcode }}<br> {% endif %}
+          {% if application.party_treasurer.phone %} Tel: {{ application.party_treasurer.phone }}<br> {% endif %}
+          {% if application.party_treasurer.email %} Email: {{ application.party_treasurer.email }}<br> {% endif %}
         </td>
         <td class="change-answer">
           <a href="/examples/elements/party-treasurer">
@@ -135,17 +152,17 @@
           Campaigns Officer
         </td>
         <td>
-          Officer name<br>
-          First line of address<br>
-          Second line of address<br>
-          Town or City<br>
-          County<br>
-          Postcode<br>
-          Tel: 01234 567 890<br>
-          Email: email@email.com<br>
+          {{ application.party_campaigns_officer.title }} {{ application.party_campaigns_officer.forenames }} {{ application.party_campaigns_officer.surname }}<br>
+          {% if application.party_campaigns_officer.addressLine1 %} {{ application.party_campaigns_officer.addressLine1 }}<br> {% endif %}
+          {% if application.party_campaigns_officer.addressLine2 %} {{ application.party_campaigns_officer.addressLine2 }}<br> {% endif %}
+          {% if application.party_campaigns_officer.town %} {{ application.party_campaigns_officer.town }}<br> {% endif %}
+          {% if application.party_campaigns_officer.county %} {{ application.party_campaigns_officer.county }}<br> {% endif %}
+          {% if application.party_campaigns_officer.postcode %} {{ application.party_campaigns_officer.postcode }}<br> {% endif %}
+          {% if application.party_campaigns_officer.phone %} Tel: {{ application.party_campaigns_officer.phone }}<br> {% endif %}
+          {% if application.party_campaigns_officer.email %} Email: {{ application.party_campaigns_officer.email }}<br> {% endif %}
         </td>
         <td class="change-answer">
-          <a href="/examples/elements/campaigns-officer">
+          <a href="/examples/elements/party-campaigns-officer">
             Change <span class="visuallyhidden">Producer name</span>
           </a>
         </td>

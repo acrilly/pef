@@ -15,6 +15,14 @@
     <a href="/examples/elements/party-correspondence" class="back-link">Back</a>
   </div>
 
+  {% if error %}
+  <div class="error-summary" tabindex="-1" aria-labelledby="error-summary-header" role="group">
+      <h2 id="error-summary-header" class="error-summary-heading">There’s a problem</h2>
+      <ul class="error-summary-list">
+        <li><a href="#address-group">Please tell us who your leader is</a></li>      
+      </ul>
+  </div>
+  {% endif %}
 
   <form action="/examples/elements/party-leader" method="post" class="form">
 
@@ -41,79 +49,15 @@
         </div>
       </details>
     </div>
-
-    <!-- Party Leader Name -->
-    <div class="form-group">
-        <fieldset>
-                <legend class="form-label-bold">
-                  Party Leader Name
-                </legend>
-
-                <div class="form-group form-group-compound">
-                  <label class="form-label" for="title">Title</label>
-                  <input name="leaderTitle" class="form-control form-control-1-4" type="text" id="Title">
-                </div>
-
-                <div class="form-group form-group-compound">
-                  <label class="form-label" for="Forenames">Forenames</label>
-                  <input name="leaderForename" class="form-control" type="text" id="Forenames">
-                </div>
-
-                <div class="form-group">
-                  <label class="form-label" for="Surname">Surname</label>
-                  <input name="leaderSurname" class="form-control" type="text" id="Surname">
-                </div>
-        </fieldset>
+    
+    <div id="party-leader-group" class="form-group" data-gakey="leader">
+      <!-- Full name -->
+      {% include "includes/full_name.html" %}
+      <!-- Address -->
+      {% include "includes/address.html" %}
+      <!-- telephone and email -->
+      {% include "includes/tel_and_email.html" %}
     </div>
-
-     <!-- Correspondence Address -->
-     <div class="form-group" id="address">
-       <fieldset>
-         <legend class="form-label-bold">Correspondence address</legend>
-         <div class="form-group form-group-compound">
-           <label class="form-label" for="address-line-1">Street</label>
-           <input name="leaderAddressLine1" class="form-control" type="text" id="addressLine1">
-         </div>
-
-         <div class="form-group form-group-compound">
-           <label class="form-label visuallyhidden" for="address-line-2">Street</label>
-           <input name="leaderAddressLine2" class="form-control" type="text" id="addressLine2">
-         </div>
-
-         <div class="form-group form-group-compound">
-           <label class="form-label" for="address-town">Town or City</label>
-           <input name="leaderTown" class="form-control form-control-1-4" type="text" id="addressTown">
-         </div>
-
-         <div class="form-group form-group-compound">
-           <label class="form-label" for="address-county">County</label>
-           <input name="leaderCounty" class="form-control form-control-1-4" type="text" id="addressCounty">
-         </div>
-
-         <div class="form-group">
-           <label class="form-label" for="address-postcode">Postcode</label>
-           <input name="leaderPostcode" class="form-control form-control-1-8" type="text" id="addressPostcode">
-         </div>
-       </fieldset>
-      </div>
-
-      <!-- Telephone number -->
-      <div class="form-group">
-        <label class="form-label-bold" for="telephone-number">
-          Telephone number
-        </label>
-        <input name="leaderPhone" type="text" class="form-control" id="telephone-number">
-      </div>
-
-      <!-- Email Address --> 
-      <div class="form-group">
-        <fieldset>
-          <legend class="form-label-bold">Email address</legend>
-          <div class="form-email">
-            <input name="leaderEmail" type="text" class="form-control" id="email">
-          </div>
-        </fieldset>
-      </div>
 
     <div class="form-group">
       <input type="submit" class="button" value="Continue">

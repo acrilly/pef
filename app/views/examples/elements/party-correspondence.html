@@ -18,74 +18,30 @@
   <form action="/examples/elements/party-correspondence" class="form" method="post" novalidate="true" autocomplete="off" >
 
     <h1 class="form-title heading-large">
-      Party Details: Address
+      Party Headquarters
     </h1>
 
     <!-- Party Address Help -->
     <div class="form-group">
       <details>
-        <summary><span class="summary">Help with party address</span></summary>
+        <summary><span class="summary">Help with party headquarters</span></summary>
         <div class="panel panel-border-narrow">
           <p>This should be the address of the party’s headquarters. If the party does not have a headquarters, it should be an address to which correspondence can be sent. Please note that this is the address to which all correspondence will be sent, and that it will be published in the public register even if it is the home address of an individual. Details of daytime telephone and email will not be published on the public register. </p>
         </div>
       </details>
     </div>
     
-     <!-- Correspondence Address -->
-     <div class="form-group" id="address">
-       <fieldset>
-         <legend class="form-label-bold">Correspondence address</legend>
-         <div class="form-group form-group-compound">
-           <label class="form-label" for="address-line-1">Street</label>
-           <input name="partyAddressLine1" class="form-control" type="text" id="addressLine1">
-         </div>
-
-         <div class="form-group form-group-compound">
-           <label class="form-label visuallyhidden" for="address-line-2">Street</label>
-           <input name="partyAddressLine2" class="form-control" type="text" id="addressLine2">
-         </div>
-
-         <div class="form-group form-group-compound">
-           <label class="form-label" for="address-town">Town or City</label>
-           <input name="partyTown" class="form-control form-control-1-4" type="text" id="addressTown">
-         </div>
-
-         <div class="form-group form-group-compound">
-           <label class="form-label" for="address-county">County</label>
-           <input name="partyCounty" class="form-control form-control-1-4" type="text" id="addressCounty">
-         </div>
-
-         <div class="form-group">
-           <label class="form-label" for="address-postcode">Postcode</label>
-           <input name="partyPostcode" class="form-control form-control-1-8" type="text" id="addressPostcode">
-         </div>
-       </fieldset>
-      </div>
-
-      <!-- Telephone number -->
-      <div class="form-group">
-        <label class="form-label-bold" for="telephone-number">
-          Telephone number
-        </label>
-        <input name="partyPhone" type="text" class="form-control" id="telephone-number">
-      </div>
-
-      <!-- Email Address --> 
-      <div class="form-group">
-        <fieldset>
-          <legend class="form-label-bold">Email address</legend>
-          <div class="form-email">
-            <input name="partyEmail" type="text" class="form-control" id="email">
-          </div>
-        </fieldset>
-      </div>
+    <!-- Address -->
+    {% include "includes/address.html" %}
+    <!-- telephone and email -->
+    {% include "includes/tel_and_email.html" %}
 
       <!-- Website Address --> 
       <div class="form-group">
         <fieldset>
           <legend class="form-label-bold">Website address</legend>
           <div class="form-website">
-            <input name="partyWebsite" type="text" class="form-control" id="website">
+            <input name="website" type="url" class="form-control" id="website">
           </div>
         </fieldset>
       </div>

@@ -20,13 +20,14 @@ router.get('/', function (req, res) {
 
 });
 
-// add your routes here
-// Political Party
+
+// Political Party POSTS
 
 router.post('/examples/elements/party-name', jsonParser, function (req, res) {
   // Party name form submitted
   // Put the party name into the session store
-  console.log("You posted " + JSON.stringify(req.body, null, 2))
+  req.session.party_name = req.body;
+  console.log("The session contains" + JSON.stringify(req.session, null, 2))
 
   // Render the next part of the application process i.e. the party correspondence page
   res.render('examples/elements/party-correspondence');
@@ -35,7 +36,8 @@ router.post('/examples/elements/party-name', jsonParser, function (req, res) {
 router.post('/examples/elements/party-correspondence', jsonParser, function (req, res) {
   // Party correspondence form submitted
   // Do something with the data to build up the application
-  console.log("You posted " + JSON.stringify(req.body, null, 2))
+  req.session.party_address = req.body;
+  console.log("The session contains" + JSON.stringify(req.session, null, 2));
 
   // Render the next part of the application process i.e. the party leader page
   res.render('examples/elements/party-leader');
@@ -44,7 +46,8 @@ router.post('/examples/elements/party-correspondence', jsonParser, function (req
 router.post('/examples/elements/party-leader', jsonParser, function (req, res) {
   // Party leader form submitted
   // Do something with the data to build up the application
-    console.log("You posted " + JSON.stringify(req.body, null, 2))
+  req.session.party_leader = req.body;
+  console.log("The session contains" + JSON.stringify(req.session, null, 2));
   // Render the next part of the application process i.e. the party nominating officer page
   res.render('examples/elements/party-nominating-officer');
 });
@@ -52,7 +55,8 @@ router.post('/examples/elements/party-leader', jsonParser, function (req, res) {
 router.post('/examples/elements/party-nominating-officer', jsonParser, function (req, res) {
   // Party nominating officer form submitted
   // Do something with the data to build up the application
-    console.log("You posted " + JSON.stringify(req.body, null, 2))
+  req.session.party_nominating_officer = req.body;
+  console.log("The session contains" + JSON.stringify(req.session, null, 2));
   // Render the next part of the application process i.e. the party treasurer page
   res.render('examples/elements/party-treasurer');
 });
@@ -60,43 +64,99 @@ router.post('/examples/elements/party-nominating-officer', jsonParser, function 
 router.post('/examples/elements/party-treasurer', jsonParser, function (req, res) {
   // Party treasurer form submitted
   // Do something with the data to build up the application
-    console.log("You posted " + JSON.stringify(req.body, null, 2))
+  req.session.party_treasurer = req.body;
+  console.log("The session contains" + JSON.stringify(req.session, null, 2));
   // Render the next part of the application process i.e. the party campaigns officer page
   res.render('examples/elements/additional-officer');
 });
 
 router.post('/examples/elements/additional-officer', jsonParser, function (req, res) {
   // Party treasurer form submitted
+  console.log("You posted " + JSON.stringify(req.body, null, 2));
+
   // Do something with the data to build up the application
-    console.log("You posted " + JSON.stringify(req.body, null, 2))
+  req.session.party_additional_officer = req.body;
+  console.log("The session contains" + JSON.stringify(req.session, null, 2));
   // Render the next part of the application process i.e. the party campaigns officer page
   res.render('examples/elements/party-campaigns-officer');
 });
 
 router.post('/examples/elements/party-campaigns-officer', jsonParser, function (req, res) {
   // Party campaigns officer form submitted
+  console.log("You posted " + JSON.stringify(req.body, null, 2));
+
   // Do something with the data to build up the application
-    console.log("You posted " + JSON.stringify(req.body, null, 2))
+  req.session.party_campaigns_officer = req.body;
+  console.log("The session contains" + JSON.stringify(req.session, null, 2));
   // Render the next part of the application process i.e. the party descriptions page
   res.render('examples/elements/party-descriptions');
 });
 
 router.post('/examples/elements/party-descriptions', jsonParser, function (req, res) {
   // Party descriptions form submitted
+  console.log("You posted " + JSON.stringify(req.body, null, 2));
+
   // Do something with the data to build up the application
-    console.log("You posted " + JSON.stringify(req.body, null, 2))
+  req.session.party_descriptions = req.body;
+  console.log("The session contains" + JSON.stringify(req.session, null, 2));
   // Render the next part of the application process i.e. the party emblems page
   res.render('examples/elements/party-emblems');
 });
 
 router.post('/examples/elements/party-emblems', jsonParser, function (req, res) {
   // Party emblems form submitted
+  console.log("You posted " + JSON.stringify(req.body, null, 2));
+
   // Do something with the data to build up the application
-    console.log("You posted " + JSON.stringify(req.body, null, 2))
+  req.session.party_emblems = req.body;
+  console.log("The session contains" + JSON.stringify(req.session, null, 2));
   // Render the next part of the application process i.e. the chaeck your answers page
-  res.render('examples/check-your-answers-page');
+  res.render('examples/check-your-answers-page', { 'application' : req.session } );
 
 });
+
+// Political Party GETS
+
+router.get('/examples/elements/party-name', jsonParser, function (req, res) {
+  res.render('examples/elements/party-name', { 'party_name' : req.session.party_name } );
+});
+
+router.get('/examples/elements/party-correspondence', jsonParser, function (req, res) {
+  res.render('examples/elements/party-correspondence', { 'entity' : req.session.party_address } );
+});
+
+router.get('/examples/elements/party-leader', function (req, res) {
+  res.render('examples/elements/party-leader', { 'entity' : req.session.party_leader } );
+});
+
+router.post('/examples/elements/party-nominating-officer', jsonParser, function (req, res) {
+  res.render('examples/elements/party-nominating-officer', { 'entity' : req.session.party_nominating_officer } );
+});
+
+router.get('/examples/elements/party-treasurer', jsonParser, function (req, res) {
+  res.render('examples/elements/party-treasurer', { 'entity' : req.session.party_treasurer } );
+});
+
+router.get('/examples/elements/additional-officer', jsonParser, function (req, res) {
+  res.render('examples/elements/additional-officer', { 'additional_officer' : req.session.party_additional_officer } );
+});
+
+router.get('/examples/elements/party-campaigns-officer', jsonParser, function (req, res) {
+  res.render('examples/elements/party-campaigns-officer', { 'entity' : req.session.party_campaigns_officer } );
+});
+
+router.get('/examples/elements/party-descriptions', jsonParser, function (req, res) {
+  res.render('examples/elements/party-descriptions', { 'descriptions' : req.session.party_descriptions } );
+});
+
+router.get('/examples/elements/party-emblems', jsonParser, function (req, res) {
+  res.render('examples/elements/party-emblems', { 'emblems' : req.session.party_emblems } );
+});
+
+router.get('/examples/check-your-answers-page', jsonParser, function (req, res) {
+  res.render('examples/check-your-answers-page', { 'application' : req.session } );
+});
+
 
 // Referendum Campaigner
 
