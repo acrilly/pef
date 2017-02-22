@@ -4,7 +4,7 @@
          <legend class="form-label-bold">Correspondence address</legend>
          <div class="form-group form-group-compound">
            <label class="form-label" for="address-line-1">Street</label>
-           <input name="addressLine1" class="form-control" type="text" id="addressLine1" value="{{ entity.addressLine1 if entity.addressLine1 }}">
+           <input name="addressLine1" class="form-control" type="text" id="addressLine1" value="{{ entity.addressLine1 if entity.addressLine1 }}" required>
          </div>
 
          <div class="form-group form-group-compound">
@@ -14,17 +14,17 @@
 
          <div class="form-group form-group-compound">
            <label class="form-label" for="address-town">Town or City</label>
-           <input name="town" class="form-control form-control-1-4" type="text" id="addressTown" value="{{ entity.town if entity.town }}">
+           <input name="town" class="form-control form-control-1-4" type="text" id="addressTown" value="{{ entity.town if entity.town }}" required>
          </div>
 
          <div class="form-group form-group-compound">
            <label class="form-label" for="address-county">County</label>
-           <input name="county" class="form-control form-control-1-4" type="text" id="addressCounty" value="{{ entity.county if entity.county }}">
+           <input name="county" class="form-control form-control-1-4" type="text" id="addressCounty" value="{{ entity.county if entity.county }}" required>
          </div>
 
          <div class="form-group">
            <label class="form-label" for="address-postcode">Postcode</label>
-           <input name="postcode" class="form-control form-control-1-8" type="text" id="addressPostcode" value="{{ entity.postcode if entity.postcode }}">
+           <input name="postcode" class="form-control form-control-1-8" type="text" id="addressPostcode" value="{{ entity.postcode if entity.postcode }}" pattern="[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}" required>
          </div>
        </fieldset>
       </div>

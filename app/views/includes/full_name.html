@@ -12,12 +12,12 @@
 
                 <div class="form-group form-group-compound">
                   <label class="form-label" for="Forenames">Forenames</label>
-                  <input name="forenames" class="form-control" type="text" id="Forenames" value="{{ entity.forenames if entity.forenames else "" }}">
+                  <input name="forenames" class="form-control" type="text" id="Forenames" value="{{ entity.forenames if entity.forenames else "" }}" required>
                 </div>
 
                 <div class="form-group">
                   <label class="form-label" for="Surname">Surname</label>
-                  <input name="surname" class="form-control" type="text" id="Surname" value="{{ entity.surname if entity.surname else "" }}">
+                  <input name="surname" class="form-control" type="text" id="Surname" value="{{ entity.surname if entity.surname else "" }}" required>
                 </div>
         </fieldset>
     </div>

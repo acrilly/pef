@@ -3,7 +3,7 @@
         <label class="form-label-bold" for="telephone-number">
           Telephone number
         </label>
-        <input name="phone" type="tel" class="form-control" id="telephone-number"  value="{{ entity.phone if entity.phone else "" }}">
+        <input name="phone" type="tel" class="form-control" id="telephone-number"  value="{{ entity.phone if entity.phone else "" }}" pattern="^\s*\(?(020[7,8]{1}\)?[ ]?[1-9]{1}[0-9{2}[ ]?[0-9]{4})|(0[1-8]{1}[0-9]{3}\)?[ ]?[1-9]{1}[0-9]{2}[ ]?[0-9]{3})\s*$" required>
       </div>
 
       <!-- Email Address --> 
